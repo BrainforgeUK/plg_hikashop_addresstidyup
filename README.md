@@ -1,4 +1,4 @@
-Provides a simple tidyup to address data entered by customer.
+Provides a simple tidyup for address data entered by customer.
 
 For instance:<br/>
 'ann other' becomes 'Ann Other'<br/>
