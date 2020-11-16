@@ -21,7 +21,10 @@ class plgHikashopBfaddresstidyup extends CMSPlugin
 
 	public function onBeforeAddressUpdate(&$address, &$do)
 	{
-		$this->tidyAddress($address);
+		if ($this->params->get('onupdatetidyup'))
+		{
+			$this->tidyAddress($address);
+		}
 	}
 
 	protected function tidyAddress(&$address)
@@ -39,7 +42,7 @@ class plgHikashopBfaddresstidyup extends CMSPlugin
 
 			foreach(array(' '=>' ', ','=>', ', '\.'=>'. ', '-'=>'-', ':'=>':', '\+'=>'+') as $from=>$to)
 			{
-				$parts = preg_split('/' . $from . '+/', $address->$field);
+				$parts = preg_split('/\s*' . $from . '+\s*/', $address->$field);
 				foreach($parts as &$part)
                 {
                     $part = ucfirst($part);
