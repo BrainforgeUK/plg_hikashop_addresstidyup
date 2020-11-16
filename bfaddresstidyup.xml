@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" method="upgrade" group="hikashop" client="site">
+    <name>PLG_HIKASHOP_BFADDRESSTIDYUP_XML_TITLE</name>
+    <creationDate>November 2020</creationDate>
+    <version>1.0.0</version>
+    <author>Jonathan Brain</author>
+    <authorEmail>brainforge.uk@btinternet.com</authorEmail>
+    <authorUrl>https://www.brainforge.co.uk</authorUrl>
+    <copyright>Copyright (C) 2020 Jonathan Brain - All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>PLG_HIKASHOP_BFADDRESSTIDYUP_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="bfaddresstidyup">bfaddresstidyup.php</filename>
+        <folder>language</folder>
+    </files>
+
+    <updateservers>
+        <server
+                type="extension"
+                priority="1"
+                name="PLG_HIKASHOP_BFADDRESSTIDYUP_XML_TITLE">
+            https://brainforge.co.uk/component/bfupdater?element=plg_hikashop_bfaddresstidyup.xml
+        </server>
+    </updateservers>
+</extension>
